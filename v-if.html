@@ -7,7 +7,7 @@
 <body>
 
 	<div id="app">
-            {{ saludo }}
+        <h1 v-if="habilitado">VueNVENIDO</h1>
     </div>
 
 	<script type="text/javascript">
@@ -15,12 +15,9 @@
 
 			el: '#app',
 			data: {
-				saludo: 'Hola mundo!'
+				habilitado: true
 			}
-		})
-		//Modificamos el valor de saludo
-		app.saludo = 'Hi'
-
+		})		
 	</script>	
 </body>
 </html>

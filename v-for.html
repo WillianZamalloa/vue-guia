@@ -7,7 +7,11 @@
 <body>
 
 	<div id="app">
-            {{ saludo }}
+        <ul>
+	    	<li v-for="framework in frameworks">
+	      		{{ framework.id }} - {{ framework.name }}
+	    	</li>
+	  	</ul>
     </div>
 
 	<script type="text/javascript">
@@ -15,12 +19,13 @@
 
 			el: '#app',
 			data: {
-				saludo: 'Hola mundo!'
+				frameworks: [
+					{id:1, name:'Laravel'},
+					{id:2, name:'Express.js'},
+					{id:3, name:'Django'}
+				]
 			}
-		})
-		//Modificamos el valor de saludo
-		app.saludo = 'Hi'
-
+		})		
 	</script>	
 </body>
 </html>

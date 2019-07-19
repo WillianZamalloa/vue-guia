@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+        <h1>{{ cadena }}</h1>
+  		<button v-on:click="invertirCadena">Invertir 1</button>
+  		<button @click="invertirCadena">Invertir 2</button>
+    </div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+
+			el: '#app',
+			data: {
+				cadena: 'Reconocer'
+			},
+			methods: {
+			    invertirCadena: function () {
+			      this.cadena = this.cadena.split('').reverse().join('')
+			    }
+			}
+
+		})		
+	</script>	
+</body>
+</html>
